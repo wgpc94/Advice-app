@@ -1,9 +1,9 @@
 package com.example.adviceapp.data
 
-import com.example.adviceapp.model.Advice
+import com.example.adviceapp.model.Slip
 
 interface AdviceCallBack {
-    fun onSuccess(advice: Advice)
+    fun onSuccess(advice: Slip)
     fun onError(msg : String)
     fun onCompleted()
 }

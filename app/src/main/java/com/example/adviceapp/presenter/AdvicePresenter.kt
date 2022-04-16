@@ -2,7 +2,7 @@ package com.example.adviceapp.presenter
 
 import com.example.adviceapp.data.AdviceCallBack
 import com.example.adviceapp.data.RemoteDataSource
-import com.example.adviceapp.model.Advice
+import com.example.adviceapp.model.Slip
 import com.example.adviceapp.view.MainActivity
 
 class AdvicePresenter(private val mainActivity: MainActivity) : AdviceCallBack{
@@ -12,8 +12,8 @@ class AdvicePresenter(private val mainActivity: MainActivity) : AdviceCallBack{
         dataSource.findRandom(this)
     }
 
-    override fun onSuccess(advice: Advice) {
-        mainActivity.showAdvice(advice)
+    override fun onSuccess(slip: Slip) {
+        mainActivity.showAdvice(slip.advice)
     }
 
     override fun onError(msg: String) {
